@@ -12,7 +12,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente " + "puesto: " + puesto ;
+        return "Cliente " + "puesto: " + puesto + "\n" ;
     }
     
     
