@@ -1,0 +1,12 @@
+
+git clone [URL Repositorio] = Descargar repositorio por primera vez
+git pull = una vez que ya lo as clonado para actualizarlo 
+
+enviar-
+1 - git add .
+2- git commit -m "comentario"
+3 - git config --global user.email "you@example.com"
+4- git config --global user.name "Your Name"git p
+5- git push origin main = mandar la modificacion a github.
+6- git checkout ramaquedeseasir
+7- git merge ramaquedeseasimportar
