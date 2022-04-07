@@ -5,14 +5,15 @@ package fruteriaed;
 public class Cliente {
     
     int puesto;
-    
-    public Cliente(int p){
+    int edad;
+    public Cliente(int p, int e){
         this.puesto= p;
+        this.edad=e;
     }
 
     @Override
     public String toString() {
-        return "Cliente " + "puesto: " + puesto + "\n" ;
+        return "Cliente " + "puesto: " + puesto +"Edad: "+ this.edad + "\n" ;
     }
     
     
