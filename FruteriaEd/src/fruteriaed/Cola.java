@@ -22,6 +22,13 @@ public class Cola {
         }
     }
     
+    public void despachar(){
+        this.cola[0]=null;
+        for (int i = 1; i < cola.length; i++) {
+            this.cola[i-1]=this.cola[i];
+        }
+    }
+    
     /*
     @Override
     public String toString() {
