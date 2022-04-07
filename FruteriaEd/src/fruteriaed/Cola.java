@@ -17,7 +17,7 @@ public class Cola {
     }
     
     public void mostrar(){
-        System.out.println("En la cola esta los clientes: \n");
+        System.out.println("En la cola esta los clientes: ");
         for (int i = 0; i < cola.length; i++) {
             System.out.print(this.cola[i]);
         }

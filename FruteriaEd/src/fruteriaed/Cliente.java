@@ -13,7 +13,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente " + "puesto: " + puesto +"Edad: "+ this.edad + "\n" ;
+        return "Cliente " + "puesto: " + puesto +" Edad: "+ this.edad + "\n" ;
     }
     
     
