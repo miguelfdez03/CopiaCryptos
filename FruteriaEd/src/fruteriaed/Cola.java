@@ -29,10 +29,14 @@ public class Cola {
         this.despachados[despacho]=this.cola[0];
         despacho++;
         this.cola[0]=null;
+        this.adelantar();
+        nclientes--;
+    }
+    
+    public void adelantar(){
         for (int i = 1; i < cola.length; i++) {
             this.cola[i-1]=this.cola[i];
         }
-        nclientes--;
     }
     
     public void mostrarDespachados(){
