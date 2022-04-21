@@ -6,7 +6,7 @@ public class Cola {
     
     Cliente cola[];
     int nclientes;
-    Cliente despachados[] = new Cliente[100];;
+    Cliente despachados[] = new Cliente[200];;
     int despacho=0;
             
     public Cola(int n){
