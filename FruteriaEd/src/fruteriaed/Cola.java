@@ -40,6 +40,12 @@ public class Cola {
         }
     }
     
+    public void retrasar(){
+        for (int i = 1; i < cola.length; i++) {
+            this.cola[i+1]=this.cola[i];
+        }
+    }
+    
     public void mostrarDespachados(){
         System.out.print("\n ---------------------- \n");
         System.out.println("Clientes Despachados:");
