@@ -4,14 +4,20 @@ package fruteriaed;
 
 public class Cola {
     
-    Cliente cola[];
+    Cliente cola[] = new Cliente[200];
     int nclientes;
-    Cliente despachados[] = new Cliente[200];;
+    Cliente despachados[] = new Cliente[200];
     int despacho=0;
             
     public Cola(int n){
         this.nclientes= n;
-        this.cola = new Cliente[nclientes];
+        for (int i = 0; i < this.nclientes; i++) {
+            int edadA=(int) Math.round((Math.random() * 50) + 10);
+            this.cola[i]= new Cliente(i+1,edadA);
+        }
+    }
+    
+    public void aniadirCliente(){
         for (int i = 0; i < cola.length; i++) {
             int edadA=(int) Math.round((Math.random() * 50) + 10);
             this.cola[i]= new Cliente(i+1,edadA);

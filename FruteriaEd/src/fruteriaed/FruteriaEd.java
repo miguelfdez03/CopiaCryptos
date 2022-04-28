@@ -10,6 +10,7 @@ public class FruteriaEd {
         System.out.println("¿Numero de Clientes?");
         int num = scanner.nextInt();
         Cola s = new Cola(num);
+        s.aniadirCliente();
         do {
             System.out.println("Fruteria Cryptos MIP");
             System.out.println("--------------------------");
