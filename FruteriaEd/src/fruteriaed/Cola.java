@@ -6,7 +6,7 @@ public class Cola {
     
     Cliente cola[];
     int nclientes;
-    Cliente despachados[] = new Cliente[100];;
+    Cliente despachados[] = new Cliente[200];;
     int despacho=0;
             
     public Cola(int n){
@@ -19,6 +19,7 @@ public class Cola {
     }
     
     public void mostrar(){
+
         System.out.print("En la cola estan los clientes: \n");
         for (int i = 0; i < nclientes; i++) {
             System.out.print(this.cola[i]);
@@ -38,6 +39,12 @@ public class Cola {
     public void adelantar(){
         for (int i = 1; i < cola.length; i++) {
             this.cola[i-1]=this.cola[i];
+        }
+    }
+    
+    public void retrasar(){
+        for (int i = 1; i < cola.length; i++) {
+            this.cola[i+1]=this.cola[i];
         }
     }
     
