@@ -40,6 +40,8 @@ public class Cola {
         nclientes--;
     }
     
+    
+    
     public void adelantar(){
         for (int i = 1; i < cola.length; i++) {
             this.cola[i]=this.cola[i-1];
@@ -48,7 +50,11 @@ public class Cola {
     
     public void retrasar(){
         for (int i = 1; i < cola.length; i++) {
-            this.cola[i]=this.cola[i+1];
+            if(this.nclientes==this.cola.length){
+                System.out.println("La cola esta llena");
+            }else{
+                this.cola[i]=this.cola[i+1];
+            }
         }
     }
     
