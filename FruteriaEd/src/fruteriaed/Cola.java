@@ -18,7 +18,8 @@ public class Cola {
     }
     
     public void aniadirCliente(){
-        for (int i = 0; i < cola.length; i++) {
+        this.nclientes++;
+        for (int i = 0; i < nclientes; i++) {
             int edadA=(int) Math.round((Math.random() * 50) + 10);
             this.cola[i]= new Cliente(i+1,edadA);
         }
