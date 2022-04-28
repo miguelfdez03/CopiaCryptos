@@ -36,13 +36,13 @@ public class Cola {
     
     public void adelantar(){
         for (int i = 1; i < cola.length; i++) {
-            this.cola[i-1]=this.cola[i];
+            this.cola[i]=this.cola[i-1];
         }
     }
     
     public void retrasar(){
         for (int i = 1; i < cola.length; i++) {
-            this.cola[i+1]=this.cola[i];
+            this.cola[i]=this.cola[i+1];
         }
     }
     
