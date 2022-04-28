@@ -44,15 +44,11 @@ public class Cola {
     
     public void retrasar(){
         for (int i = 1; i < cola.length; i++) {
-<<<<<<< HEAD
             if(this.nclientes==this.cola.length){
                 System.out.println("La cola esta llena");
             }else{
                 this.cola[i]=this.cola[i+1];
             }
-=======
-            this.cola[i]=this.cola[i+1];
->>>>>>> b873fe36cae52ee40efec623e73a904707595783
         }
     }
     
