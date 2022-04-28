@@ -6,6 +6,8 @@ public class Cola {
     
     Cliente cola[];
     int nclientes;
+    Cliente despachados[] = new Cliente[200];;
+    int despacho=0;
             
     public Cola(int n){
         this.nclientes= n;
@@ -17,10 +19,40 @@ public class Cola {
     }
     
     public void mostrar(){
-        System.out.println("En la cola esta los clientes: \n");
-        for (int i = 0; i < cola.length; i++) {
+
+        System.out.print("En la cola estan los clientes: \n");
+        for (int i = 0; i < nclientes; i++) {
             System.out.print(this.cola[i]);
         }
+    }
+    
+    public void despachar(){
+        this.despachados[despacho]=this.cola[0];
+        despacho++;
+        this.cola[0]=null;
+        this.adelantar();
+        nclientes--;
+    }
+    
+    public void adelantar(){
+        for (int i = 1; i < cola.length; i++) {
+            this.cola[i]=this.cola[i-1];
+        }
+    }
+    
+    public void retrasar(){
+        for (int i = 1; i < cola.length; i++) {
+            this.cola[i]=this.cola[i+1];
+        }
+    }
+    
+    public void mostrarDespachados(){
+        System.out.print("\n ---------------------- \n");
+        System.out.println("Clientes Despachados:");
+        for (int i = 0; i < despacho; i++) {
+            System.out.print(this.despachados[i]);
+        }
+        System.out.println("----------------------");
     }
     
     /*
