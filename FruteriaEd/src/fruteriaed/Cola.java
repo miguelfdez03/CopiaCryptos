@@ -33,6 +33,8 @@ public class Cola {
         nclientes--;
     }
     
+    
+    
     public void adelantar(){
         for (int i = 1; i < cola.length; i++) {
             this.cola[i-1]=this.cola[i];
