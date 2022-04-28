@@ -1,11 +1,11 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 package fruteriaed;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -16,27 +16,45 @@ public class ColaTest {
     public ColaTest() {
     }
 
-    @org.junit.jupiter.api.Test
+    /**
+     * Test of aniadirCliente method, of class Cola.
+     */
+    @Test
     public void testAniadirCliente() {
     }
 
-    @org.junit.jupiter.api.Test
+    /**
+     * Test of mostrar method, of class Cola.
+     */
+    @Test
     public void testMostrar() {
     }
 
-    @org.junit.jupiter.api.Test
+    /**
+     * Test of despachar method, of class Cola.
+     */
+    @Test
     public void testDespachar() {
     }
 
-    @org.junit.jupiter.api.Test
+    /**
+     * Test of adelantar method, of class Cola.
+     */
+    @Test
     public void testAdelantar() {
     }
 
-    @org.junit.jupiter.api.Test
+    /**
+     * Test of retrasar method, of class Cola.
+     */
+    @Test
     public void testRetrasar() {
     }
 
-    @org.junit.jupiter.api.Test
+    /**
+     * Test of mostrarDespachados method, of class Cola.
+     */
+    @Test
     public void testMostrarDespachados() {
     }
     
