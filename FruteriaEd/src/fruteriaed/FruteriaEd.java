@@ -3,6 +3,7 @@ package fruteriaed;
 import java.util.Scanner;
 
 public class FruteriaEd {
+        
 
     public static void main(String[] args) {
         int opcion;
