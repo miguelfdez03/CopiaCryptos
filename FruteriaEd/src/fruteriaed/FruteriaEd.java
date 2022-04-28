@@ -3,6 +3,7 @@ package fruteriaed;
 import java.util.Scanner;
 
 public class FruteriaEd {
+        
 
     public static void main(String[] args) {
         int opcion;
@@ -21,7 +22,22 @@ public class FruteriaEd {
             System.out.println("6. Salir.");
             System.out.print("opción? >>");
             opcion = scanner.nextInt();
-
+            
+            switch(opcion){
+                case 1:
+                    s.despachar();
+                    break;
+                case 2: 
+                    s.adelantar();
+                    break;
+                case 3:
+                    s.retrasar();
+                case 4:
+                    s.mostrar();
+                case 5:
+                    s.mostrarDespachados();
+            }
+                    
         } while (opcion != 6);
         //salgo del bucle cuando ponga 6
         System.out.println("");
