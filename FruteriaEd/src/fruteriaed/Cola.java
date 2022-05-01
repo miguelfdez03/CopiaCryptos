@@ -55,6 +55,7 @@ public class Cola {
     public void mostrarDespachados(){
         System.out.print("\n ---------------------- \n");
         System.out.println("Clientes Despachados:");
+        System.out.println(this.despacho);
         for (int i = 0; i < despacho; i++) {
             System.out.print(this.despachados[i]);
         }
