@@ -28,6 +28,12 @@ public class ColaTest {
      */
     @Test
     public void testMostrar() {
+        Cola s = new Cola(10);
+        
+        s.despachar();
+        s.despachar();
+        assertEquals(8, s.nclientes);
+        
     }
 
     /**
