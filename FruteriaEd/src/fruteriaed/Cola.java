@@ -6,6 +6,7 @@ public class Cola {
     int nclientes;
     Cliente despachados[] = new Cliente[200];
     int despacho = 0;
+    int adelantos=0;
 
     public Cola(int n) {
         this.nclientes = n;
@@ -37,8 +38,16 @@ public class Cola {
     }
 
     public void adelantar() {
+        this.cola[0]=null;
+        this.adelantos++;
         for (int i = 1; i < nclientes; i++) {
-            this.cola[i] = this.cola[i - 1];
+            if(this.adelantos>this.nclientes){
+                System.out.println("No se puede adelantar mas");
+            }else{
+                this.cola[i] = this.cola[i - 1];
+            }
+            
+            
         }
     }
 

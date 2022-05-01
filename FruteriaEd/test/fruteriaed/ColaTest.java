@@ -21,6 +21,12 @@ public class ColaTest {
      */
     @Test
     public void testAniadirCliente() {
+        Cola s = new Cola(2);
+        
+        s.aniadirCliente();
+        s.aniadirCliente();
+        s.aniadirCliente();
+        assertEquals(5, s.nclientes);
     }
 
     /**
@@ -41,6 +47,12 @@ public class ColaTest {
      */
     @Test
     public void testDespachar() {
+        Cola s = new Cola(5);
+        
+        s.despachar();
+        s.despachar();
+        s.despachar();
+        assertEquals(2, s.nclientes);
     }
 
     /**
