@@ -22,7 +22,6 @@ public class Cola {
     }
 
     public void mostrar() {
-
         System.out.print("En la cola estan los clientes: \n");
         for (int i = 0; i < nclientes; i++) {
             System.out.print(this.cola[i]);
@@ -38,7 +37,7 @@ public class Cola {
     }
 
     public void adelantar() {
-        for (int i = 1; i < cola.length; i++) {
+        for (int i = 1; i < nclientes; i++) {
             this.cola[i] = this.cola[i - 1];
         }
     }
@@ -56,6 +55,7 @@ public class Cola {
     public void mostrarDespachados() {
         System.out.print("\n ---------------------- \n");
         System.out.println("Clientes Despachados:");
+        System.out.println(this.despacho);
         for (int i = 0; i < despacho; i++) {
             System.out.print(this.despachados[i]);
         }

@@ -66,7 +66,7 @@ public class ColaTest {
     Cola a =new Cola(20);
     
     a.adelantar();
-    assertEquals(19, a.nclientes);
+    assertEquals(20, a.nclientes);
     }
     
 
