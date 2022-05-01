@@ -48,14 +48,27 @@ public class ColaTest {
      */
     @Test
     public void testAdelantar() {
+        
+    Cola f =new Cola(20);
+    
+    f.adelantar();
+    assertEquals(19, f.nclientes);
     }
-
+    
+    
+    
     /**
      * Test of retrasar method, of class Cola.
      */
     @Test
     public void testRetrasar() {
+        
+    Cola a =new Cola(20);
+    
+    a.adelantar();
+    assertEquals(19, a.nclientes);
     }
+    
 
     /**
      * Test of mostrarDespachados method, of class Cola.
