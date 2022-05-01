@@ -20,7 +20,8 @@ public class FruteriaEd {
             System.out.println("3. Restrasar.");
             System.out.println("4. Mostrar Clientes Actuales.");
             System.out.println("5. Mostrar Clientes Despachados.");
-            System.out.println("6. Salir.");
+            System.out.println("6. Añadir cliente");
+            System.out.println("7. Salir.");
             System.out.print("opción? >>");
             opcion = scanner.nextInt();
             
@@ -33,13 +34,19 @@ public class FruteriaEd {
                     break;
                 case 3:
                     s.retrasar();
+                    break;
                 case 4:
                     s.mostrar();
+                    break;
                 case 5:
                     s.mostrarDespachados();
+                    break;
+                case 6 :
+                    s.aniadirCliente();
+                    break;
             }
                     
-        } while (opcion != 6);
+        } while (opcion != 7);
         //salgo del bucle cuando ponga 6
         System.out.println("");
         System.out.println("");
