@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Asus
+ * @author migue
  */
 public class ColaTest {
     
@@ -17,10 +17,22 @@ public class ColaTest {
     }
 
     /**
+     * Test of aniadirCliente method, of class Cola.
+     */
+    @Test
+    public void testAniadirCliente() {
+    }
+
+    /**
      * Test of mostrar method, of class Cola.
      */
     @Test
     public void testMostrar() {
+        Cola s = new Cola(10);
+        
+        s.despachar();
+        s.despachar();
+        assertEquals(8, s.nclientes);
         
     }
 
@@ -28,18 +40,7 @@ public class ColaTest {
      * Test of despachar method, of class Cola.
      */
     @Test
-    public void testDespacharCuandoHay20Clientes() {
-        // 1.- Preparar datos de la prueba
-        Cola fru = new Cola(20);
-        
-        // 2.- Probar
-        fru.despachar();
-        
-        // 3.- Verificar
-        assertEquals( 20, fru.nclientes);
-        assertEquals( 20, fru.nclientes);
-        assertEquals( 20, fru.nclientes);
-                
+    public void testDespachar() {
     }
 
     /**
