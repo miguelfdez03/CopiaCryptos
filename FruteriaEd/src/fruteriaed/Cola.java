@@ -1,65 +1,59 @@
-
 package fruteriaed;
 
-
 public class Cola {
-    
+
     Cliente cola[] = new Cliente[200];
     int nclientes;
     Cliente despachados[] = new Cliente[200];
-    int despacho=0;
-            
-    public Cola(int n){
-        this.nclientes= n;
+    int despacho = 0;
+
+    public Cola(int n) {
+        this.nclientes = n;
         for (int i = 0; i < this.nclientes; i++) {
-            int edadA=(int) Math.round((Math.random() * 50) + 10);
-            this.cola[i]= new Cliente(i+1,edadA);
+            int edadA = (int) Math.round((Math.random() * 50) + 10);
+            this.cola[i] = new Cliente(i + 1, edadA);
         }
     }
-    
-    public void aniadirCliente(){
+
+    public void aniadirCliente() {
         this.nclientes++;
-        for (int i = 0; i < nclientes; i++) {
-            int edadA=(int) Math.round((Math.random() * 50) + 10);
-            this.cola[i]= new Cliente(i+1,edadA);
-        }
+        int edadA = (int) Math.round((Math.random() * 50) + 10);
+        this.cola[nclientes] = new Cliente(nclientes + 1, edadA);
     }
-    
-    public void mostrar(){
+
+    public void mostrar() {
 
         System.out.print("En la cola estan los clientes: \n");
         for (int i = 0; i < nclientes; i++) {
             System.out.print(this.cola[i]);
         }
     }
-    
-    public void despachar(){
-        this.despachados[despacho]=this.cola[0];
+
+    public void despachar() {
+        this.despachados[despacho] = this.cola[0];
         despacho++;
-        this.cola[0]=null;
+        this.cola[0] = null;
         this.adelantar();
         nclientes--;
     }
-    
-    
-    
-    public void adelantar(){
+
+    public void adelantar() {
         for (int i = 1; i < cola.length; i++) {
-            this.cola[i]=this.cola[i-1];
+            this.cola[i] = this.cola[i - 1];
         }
     }
-    
-    public void retrasar(){
+
+    public void retrasar() {
         for (int i = 1; i < cola.length; i++) {
-            if(this.nclientes==this.cola.length){
+            if (this.nclientes == this.cola.length) {
                 System.out.println("La cola esta llena");
-            }else{
-                this.cola[i]=this.cola[i+1];
+            } else {
+                this.cola[i] = this.cola[i + 1];
             }
         }
     }
-    
-    public void mostrarDespachados(){
+
+    public void mostrarDespachados() {
         System.out.print("\n ---------------------- \n");
         System.out.println("Clientes Despachados:");
         for (int i = 0; i < despacho; i++) {
@@ -67,7 +61,7 @@ public class Cola {
         }
         System.out.println("----------------------");
     }
-    
+
     /*
     @Override
     public String toString() {
@@ -78,8 +72,5 @@ public class Cola {
         }
          return res;         
     }
-     */  
-    
-    
-    
+     */
 }
