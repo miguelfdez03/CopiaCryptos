@@ -74,8 +74,8 @@ public class ColaTest {
         
     Cola a =new Cola(20);
     
-    a.adelantar();
-    assertEquals(20, a.nclientes);
+    a.retrasar();
+    assertEquals(21, a.nclientes);
     }
     
 

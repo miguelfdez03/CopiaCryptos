@@ -59,6 +59,7 @@ public class Cola {
                 this.cola[i] = this.cola[i + 1];
             }
         }
+        nclientes++;
     }
 
     public void mostrarDespachados() {
