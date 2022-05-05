@@ -90,7 +90,8 @@ public class ColaTest {
         a.despachar();
         a.despachar();
         a.despachar();
-        assertEquals(15, a.despacho);
+        assertEquals(15, a.nclientes);
+        assertEquals(5, a.despacho);
     }
     
 }
