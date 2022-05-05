@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
- */
+
 package fruteriaed;
 
 import org.junit.Test;
@@ -87,6 +84,13 @@ public class ColaTest {
      */
     @Test
     public void testMostrarDespachados() {
+        Cola a =new Cola(20);
+        a.despachar();
+        a.despachar();
+        a.despachar();
+        a.despachar();
+        a.despachar();
+        assertEquals(15, a.despacho);
     }
     
 }
