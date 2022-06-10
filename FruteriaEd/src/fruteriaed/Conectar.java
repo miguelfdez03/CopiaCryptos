@@ -6,9 +6,9 @@ import java.sql.DriverManager;
  
 public class Conectar {
   
-    public static final String URL = "jdbc:mysq l://localhost:3306/pruebajava";
-    public static final String USER = "root";
-    public static final String CLAVE = "";
+    public static final String URL = "jdbc:oracle:thin:@//localhost:1521/pruebas_bd";
+    public static final String USER = "C#_admin";
+    public static final String CLAVE = "admin";
       
     public Connection getConexion(){
         Connection con = null;

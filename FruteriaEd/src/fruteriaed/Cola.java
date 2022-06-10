@@ -1,6 +1,7 @@
 package fruteriaed;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -21,6 +22,40 @@ public class Cola {
         for (int i = 0; i < this.nclientes; i++) {
             int edadA = (int) Math.round((Math.random() * 50) + 10);
             this.cola[i] = new Cliente(i + 1, edadA);
+            Connection con = null;
+     PreparedStatement stmt = null;
+
+
+     String sURL = "jdbc:oracle:thin:@//localhost:1521/pruebas_bd";
+
+     try{
+   
+        con = DriverManager.getConnection(sURL,"C##_admin","admin");
+        stmt = con.prepareStatement("INSERT INTO clientesnodespachados VALUES (?)");
+        stmt.setString(1,String.valueOf(this.cola[i]));
+
+        int retorno = stmt.executeUpdate();
+        if (retorno>0)
+           System.out.println("Insertado correctamente");      
+
+     } catch (SQLException sqle){
+        System.out.println("SQLState: " 
+           + sqle.getSQLState());
+        System.out.println("SQLErrorCode: " 
+           + sqle.getErrorCode());
+        sqle.printStackTrace();
+     } catch (Exception e){
+        e.printStackTrace();
+     } finally {
+        if (con != null) {
+           try{
+              stmt.close();
+              con.close();
+           } catch(Exception e){
+              e.printStackTrace();
+           }
+        }
+     }           
         }
     }
 
@@ -75,7 +110,42 @@ public class Cola {
         System.out.println(this.despacho);
         for (int i = 0; i < despacho; i++) {
             System.out.print(this.despachados[i]);
+             Connection con = null;
+     PreparedStatement stmt = null;
+
+
+     String sURL = "jdbc:oracle:thin:@//localhost:1521/pruebas_bd";
+
+     try{
+   
+        con = DriverManager.getConnection(sURL,"C##_admin","admin");
+        stmt = con.prepareStatement("INSERT INTO clientesdespachados VALUES (?)");
+        stmt.setString(1,String.valueOf(this.despachados[i]));
+
+        int retorno = stmt.executeUpdate();
+        if (retorno>0)
+           System.out.println("Insertado correctamente");      
+
+     } catch (SQLException sqle){
+        System.out.println("SQLState: " 
+           + sqle.getSQLState());
+        System.out.println("SQLErrorCode: " 
+           + sqle.getErrorCode());
+        sqle.printStackTrace();
+     } catch (Exception e){
+        e.printStackTrace();
+     } finally {
+        if (con != null) {
+           try{
+              stmt.close();
+              con.close();
+           } catch(Exception e){
+              e.printStackTrace();
+           }
         }
+     }           
+        }
+        
         System.out.println("----------------------");
     }
     public void insertardespachados(String Datos){
