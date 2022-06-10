@@ -1,5 +1,10 @@
 package fruteriaed;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 public class Cola {
 
     Cliente cola[] = new Cliente[200];
@@ -7,8 +12,11 @@ public class Cola {
     Cliente despachados[] = new Cliente[200];
     int despacho = 0;
     int adelantos=0;
+    private Conectar conectar;
+    private Connection con;
 
     public Cola(int n) {
+        conectar = new Conectar();
         this.nclientes = n;
         for (int i = 0; i < this.nclientes; i++) {
             int edadA = (int) Math.round((Math.random() * 50) + 10);
@@ -69,6 +77,11 @@ public class Cola {
             System.out.print(this.despachados[i]);
         }
         System.out.println("----------------------");
+    }
+    public void insertardespachados(String Datos){
+        PreparedStatement ps;
+        String sql;
+        con = conectar.getConexion();
     }
 
     /*

@@ -3,7 +3,6 @@ package fruteriaed;
 
 
 public class Cliente {
-    
     int puesto;
     int edad;
     public Cliente(int p, int e){
